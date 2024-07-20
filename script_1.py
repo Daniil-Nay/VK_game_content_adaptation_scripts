@@ -16,8 +16,8 @@ def directory_search(
     match os.name:
         case 'nt':
             possible_paths.extend([
-                # os.path.expandvars(fr'%ProgramFiles%\Steam\steamapps\common\{game_name}'),
-                # os.path.expandvars(fr'%ProgramFiles(x86)%\Steam\steamapps\common\{game_name}'),
+                os.path.expandvars(fr'%ProgramFiles%\Steam\steamapps\common\{game_name}'),
+                os.path.expandvars(fr'%ProgramFiles(x86)%\Steam\steamapps\common\{game_name}'),
                 os.path.expandvars(fr'%LOCALAPPDATA%\Programs\{game_name}'),
             ])
         case 'posix':
